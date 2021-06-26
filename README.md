@@ -14,6 +14,12 @@
 
 <br>
 
+## 📋 Minhas features
+
+- [x] Adicionar modal de confirmação
+- [ ] Modo dark
+- [ ] Responsividade
+
 ## 🧪 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
