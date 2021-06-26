@@ -17,7 +17,7 @@
 ## 📋 Minhas features
 
 - [x] Adicionar modal de confirmação
-- [ ] Modo dark
+- [x] Modo dark
 - [ ] Responsividade
 
 ## 🧪 Tecnologias
