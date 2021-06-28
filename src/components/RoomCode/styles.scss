@@ -28,4 +28,13 @@
     font-size: 14px;
     font-weight: 500;
   }
+
+  @media screen and (max-width: 800px) {
+    span {
+      width: auto;
+      font-size: 12px;
+      max-width: 120px;
+      word-break: break-all;
+    }
+  }
 }

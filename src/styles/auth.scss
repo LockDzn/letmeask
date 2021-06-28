@@ -30,6 +30,25 @@
       margin-top: 16px;
       color: #f8f8f8;
     }
+
+    @media screen and (max-width: 800px) {
+      flex: 1;
+      padding: 30px 80px;
+
+      img {
+        display: none;
+      }
+
+      strong {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
+    }
   }
 
   main {
@@ -136,5 +155,10 @@
       background: #a8a8b3;
       margin-left: 16px;
     }
+  }
+
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
   }
 }

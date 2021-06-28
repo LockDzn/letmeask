@@ -10,12 +10,12 @@ import answerImage from '../assets/images/answer.svg'
 import { Button } from '../components/Button'
 import { Question } from '../components/Question'
 import { RoomCode } from '../components/RoomCode'
-//import { useAuth } from '../hooks/useAuth'
+import { useAuth } from '../hooks/useAuth'
 import { useRoom } from '../hooks/useRoom'
 
 import '../styles/room.scss'
 import { database } from '../services/firebase'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 Modal.setAppElement('#root')
 
@@ -29,7 +29,7 @@ export const AdminRoom = () => {
     useState(false)
   const [questionIdToDelete, setQuestionIdToDelete] = useState('')
 
-  //const { user, signInWithGoogle } = useAuth()
+  const { user } = useAuth()
   const params = useParams<RouteParamsProps>()
   const roomId = params.id
 
@@ -59,6 +59,15 @@ export const AdminRoom = () => {
       .remove()
     toggleDeleteQuestionModal()
   }
+
+  useEffect(() => {
+    const roomRaf = database.ref(`rooms/${roomId}`).get()
+    roomRaf.then((room) => {
+      if (user?.id !== undefined && room.val().authorId !== user?.id) {
+        history.push(`/rooms/${roomId}`)
+      }
+    })
+  }, [user, roomId, history])
 
   async function handleCheckQuestionAsAnswered(questionId: string) {
     await database.ref(`rooms/${roomId}/questions/${questionId}`).update({

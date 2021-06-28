@@ -21,6 +21,10 @@
         button {
           height: 40px;
         }
+
+        @media screen and (max-width: 800px) {
+          flex-direction: column;
+        }
       }
     }
   }
@@ -107,6 +111,10 @@
     .question-list {
       margin-top: 32px;
     }
+
+    @media screen and (max-width: 800px) {
+      padding: 0 2rem;
+    }
   }
 }
 
@@ -173,4 +181,8 @@
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.6);
+
+  @media screen and (max-width: 800px) {
+    padding: 0 1.2rem;
+  }
 }
