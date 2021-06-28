@@ -18,7 +18,7 @@
 
 - [x] Adicionar modal de confirmação
 - [x] Modo dark
-- [ ] Responsividade
+- [x] Responsividade
 
 ## 🧪 Tecnologias
 
